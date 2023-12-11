@@ -12,6 +12,19 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>8</project.build.sourceEncoding>
+        <maven.compiler.release>8</maven.compiler.release>
+        <build>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.11.0</version>
+                    <configuration>
+                        <release>8</release>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </build>
     </properties>
         <dependencies>
         <dependency>
@@ -24,14 +37,5 @@
             <artifactId>selenium-api</artifactId>
             <version>4.15.0</version>
         </dependency>
-        <dependency>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
-        </dependency>
-
-
         </dependencies>
-
-
 </project>
