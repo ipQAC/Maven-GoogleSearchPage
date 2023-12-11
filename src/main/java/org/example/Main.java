@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 public class Main {
-    public static <WebDriver> void main (String[] args) throws InterruptedException {
+    public static void main (String[] args) throws InterruptedException {
         // System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
         ChromeDriver driver = new ChromeDriver();
 
@@ -44,5 +44,6 @@ public class Main {
 
         driver.close();
     }
+
 }
 
