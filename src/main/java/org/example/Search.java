@@ -11,16 +11,16 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 
 public class Search {
-    public static WebDriver driver;
+    public  WebDriver driver;
     @BeforeTest
     public void setup(){
-        System.setProperty("web-driver.chrome.driver","C:/Users/ipatel/Downloads/IntelliJ + Selenium/IntelliJ + Selenium/chromedriver.exe");
+       System.setProperty("web-driver.chrome.driver","C:\\Users\\ipatel\\IdeaProjects\\GoogleSearchPage_mavenJava\\src\\main\\resources\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://www.google.com/");
 
     }
-    @Test
-    void teststeps() {
+    @Test 
+    public void teststeps() {
 
         System.out.println("Page Title is " + driver.getTitle());
 
