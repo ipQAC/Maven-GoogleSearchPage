@@ -13,7 +13,7 @@ import java.time.Duration;
 public class Search {
     public static WebDriver driver;
     @BeforeTest
-    public static void setup(){
+    public void setup(){
         System.setProperty("web-driver.chrome.driver","C:/Users/ipatel/Downloads/IntelliJ + Selenium/IntelliJ + Selenium/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://www.google.com/");
