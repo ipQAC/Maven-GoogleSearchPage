@@ -2,17 +2,25 @@ package org.example;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class Main {
-    public static void main (String[] args) throws InterruptedException {
-        // System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
-        ChromeDriver driver = new ChromeDriver();
-
+public class Search {
+    public static WebDriver driver;
+    @BeforeTest
+    public static void setup(){
+        System.setProperty("web-driver.chrome.driver","C:/Users/ipatel/Downloads/IntelliJ + Selenium/IntelliJ + Selenium/chromedriver.exe");
+        driver = new ChromeDriver();
         driver.get("https://www.google.com/");
+
+    }
+    @Test
+    void teststeps() {
 
         System.out.println("Page Title is " + driver.getTitle());
 
@@ -25,7 +33,7 @@ public class Main {
         keyword.sendKeys(Keys.ENTER);
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
-        //driver.findElement(By.cssSelector(".DKV0Md")).click();
+            //driver.findElement(By.cssSelector(".DKV0Md")).click();
         driver.findElement(By.cssSelector("#rso > div:nth-child(3) > div > div > div.kb0PBd.cvP2Ce.jGGQ5e > div > div > span > a > h3")).click();
 
         System.out.println("User redirected to " + driver.getCurrentUrl());
@@ -33,10 +41,11 @@ public class Main {
         String expectedTitle = "Selenium";
         String actualTitle = driver.getTitle();
 
-        if (actualTitle.contentEquals(expectedTitle)) {
-
+        if (actualTitle.contentEquals(expectedTitle))
+        {
             System.out.println("Test Passed");
-        } else {
+        }
+        else {
             System.out.println("Test Failed");
         }
 
