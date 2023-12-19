@@ -5,6 +5,7 @@
         <classes>
             <class name="org.example.Search">
                 <methods>
+                    <include name="setup"/>
                     <include name="teststeps"/>
                 </methods>
             </class>
